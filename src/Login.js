@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import HomePage from "./HomePage";
 
 export class Login extends Component {
   constructor() {
@@ -37,7 +36,6 @@ export class Login extends Component {
     return (
       <div className="jumbotron">
         <div className="container">
-          <div className="col-sm-8 col-sm-offset-2">
             <form name="form" onSubmit={this.handleSubmit}>
               <div
                 className={
@@ -80,10 +78,9 @@ export class Login extends Component {
           </div>
           {logged && (
           <div>
-              <HomePage></HomePage>
+              <h1>{`Bonjour ${username}, vous êtes connecté`}</h1>
           </div>
           )}
-        </div>
       </div>
     );
   }
